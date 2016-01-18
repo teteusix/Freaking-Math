@@ -24,10 +24,9 @@
     background: #e74c3c;
     color: #f1c40f;
     text-align: center;
-    padding: 0;
-    height: 100vh;
-    position: absolute;
-    margin-top: -162px;
+    padding: 20px;
+    /*position: absolute;*/
+    /*margin-top: -162px;*/
     width: 99%;
 }
 </style>
@@ -42,14 +41,16 @@
 </div>
 <div id="resultrandom"></div>
 <div id="button">
-	<span id="right">Certo</span>
-	<span id="wrong">Errado</span>
+	<button id="right">Certo</button>
+	<button id="wrong">Errado</button>
 </div>
 <input type="text" id="score" name="score" value="0">
 </div>
 
 <div id="endGame">
-	<h1>Você perdeu</h1>
+	<h1>Você errou</h1>
+
+	<p>Sua pontuação foi <strong id="finalScore"></strong></p>
 </div>
 
 <script type="text/javascript" src="jquery-2.1.4.min.js"></script>

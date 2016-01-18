@@ -14,28 +14,29 @@ function nextTurn() {
 		sum1 = document.getElementById('sum1'),
 		sum2 = document.getElementById('sum2'),
 		moduleId = newScore(),
-		valueResultRandom = 1+Math.floor(Math.random()*18), // Generate a random number between 1 and 18
-		resultRandom = document.getElementById('resultrandom'),
+		resultRandom = 1+Math.floor(Math.random()*18), // Generate a random number between 1 and 18
+		viewresultRandom = document.getElementById('resultrandom'),
 		trueResult = valueSum1 + valueSum2,
 		right = document.getElementById('right'),
 		wrong = document.getElementById('wrong'),
-		r_value = [trueResult, valueResultRandom],
+		r_value = [trueResult, resultRandom],
 		r_randomBtV = Math.floor(2*Math.random()); // Randon between trueResult and randomresult
-		window.viewResult = r_value[r_randomBtV];
+		viewResult = r_value[r_randomBtV];
 	
-	// verify true result
-	if (window.viewResult == trueResult) {		
-		console.log('O botão certo');
-		right.addEventListener("click", nextTurn, true);
-		wrong.addEventListener("click", endGame, true);
-	} else {
-		console.log('O botão errado');
-		wrong.addEventListener("click", nextTurn, true);
-		right.addEventListener("click", endGame, true);
-	};
 	sum1.innerHTML = valueSum1;
 	sum2.innerHTML = valueSum2;
-	resultRandom.innerHTML = "Resultado: <strong>" + window.viewResult + "</strong><br/>Aleatorio: <strong>" + valueResultRandom + "</strong><br/>Real: <strong>" + trueResult + "</strong>";
+	viewresultRandom.innerHTML = "Resultado: <strong>" + viewResult + "</strong><br/>Aleatorio: <strong>" + resultRandom + "</strong><br/>Real: <strong>" + trueResult + "</strong>";
+
+	// verify true result
+	if (viewResult == trueResult) {	
+		console.log('O botão certo');
+		right.setAttribute('onclick','nextTurn()');
+		wrong.setAttribute('onclick','endGame()');
+	} else if (viewResult != trueResult){
+		console.log('O botão errado');
+		wrong.setAttribute('onclick','nextTurn()');
+		right.setAttribute('onclick','endGame()');
+	};
 	
 	// get value score after insert new score
 	document.getElementById('score').getAttribute('value');
@@ -45,5 +46,8 @@ function nextTurn() {
 
 function endGame() {
 	$('#endGame').slideDown();
-	setTimeout(function(){ location.reload(); }, 9000);
+	// setTimeout(function(){ location.reload(); }, 9000);
+
+	var finalScore = document.getElementById('score').getAttribute('value');
+	document.getElementById('finalScore').innerHTML = finalScore;
 }
