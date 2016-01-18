@@ -30,7 +30,7 @@ function nextTurn() {
 		sum2 = document.getElementById('sum2'),
 		score_val = newScore(),
 		// countDown = startCountdown(),
-		countDown = batata(),
+		countDown = startCountdown(),
 		resultRandom = 1+Math.floor(Math.random()*18), // Generate a random number between 1 and 18
 		viewresultRandom = document.getElementById('resultrandom'),
 		trueResult = valueSum1 + valueSum2,
@@ -71,10 +71,12 @@ function endGame() {
 
 
 
-function batata() {
+function startCountdown() {
 	var barArea = document.getElementById('bar-area');
 	barArea.innerHTML = '';
 	clearInterval(animate);
+	var time = 0;
+	console.log(time);
 
 	var barra1 = document.createElement("progress");
 	barra1.setAttribute("value", "0");
@@ -86,14 +88,19 @@ function batata() {
 	var value = barra1.getAttribute('value');
 	var value = parseInt(1);
 	console.log(max);
+	console.log(time);
 
 	var loading = function() {
 		value += 1;
 		addValue = barra1.setAttribute('value', value);
 
 		if (value == max) {
+			var time = 0;
+			//var value = 0;
+			addValue = barra1.setAttribute('value', 0);
 			clearInterval(animate);
 			endGame();          
+			return false;
 		}
 	};
 
