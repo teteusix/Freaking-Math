@@ -10,10 +10,10 @@ function newScore() {
 // FIRST TURN
 function firstTurn() {
 	nextTurn();
-	
+
 	//$('.contentplay').fadeOut();
 	$('.contentplay').slideUp('100');
-	$('.main').fadeIn();
+	$('.main').slideDown();
 }
 
 // NEW TURN
@@ -54,9 +54,6 @@ function nextTurn() {
 
 
 function endGame() {
+	$('.sum,.buttons').slideUp();
 	$('#endGame').slideDown();
-	// setTimeout(function(){ location.reload(); }, 9000);
-
-	var finalScore = document.getElementById('score').getAttribute('value');
-	document.getElementById('finalScore').innerHTML = finalScore;
 }
