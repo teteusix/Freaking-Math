@@ -1,12 +1,12 @@
-# Jogo de Matematica
+# Freaking Math
 
-Veja funcionando:
+Veja funcionando: [Veja funcionando!](http://teteusix.com/projects/freaking-math/)
 
 Objetivo: Projeto de estudo
 
 ## Sobre
 
-É baseado no jogo Freaking Math https://play.google.com/store/apps/details?id=com.bangdev.freakingmath
+É baseado no jogo [Freaking Math](https://play.google.com/store/apps/details?id=com.bangdev.freakingmath) 
 
 Quando se inicia o jogo, aparece uma soma e um resultado e também dois botões o "certo" e o "errado".
 
