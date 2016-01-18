@@ -190,6 +190,7 @@ h6 {
     border-radius: 155px;
     cursor: pointer;
     border: 5px solid #2c3e50;
+    width: 125px;
 }
 .play:hover {background: #bdc3c7;}
 .contentplay p {
@@ -204,7 +205,6 @@ h6 {
 }
 
 .sum {
-    display: none;
     padding: 10px 0;
     font-size: 70px;
     font-weight: bolder;

@@ -12,8 +12,8 @@ function firstTurn() {
 	nextTurn();
 
 	//$('.contentplay').fadeOut();
-	$('.contentplay').slideUp('100');
-	$('.main').slideDown();
+	$('.contentplay').css('display', 'none');
+	$('.main').fadeIn(1000);
 }
 
 // NEW TURN
@@ -54,6 +54,6 @@ function nextTurn() {
 
 
 function endGame() {
-	$('.sum,.buttons').slideUp();
-	$('#endGame').slideDown();
+	$('.sum,.buttons').css('display', 'none');
+	$('#endGame').fadeIn(1000);
 }
