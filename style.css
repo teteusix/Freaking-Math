@@ -153,8 +153,6 @@ h6 {
 .content {
     position: relative;
     margin: 10px auto;
-    width: 540px;
-    /* border: 1px solid #ccc; */
     padding: 20px;
     max-width: 100%;
 }
@@ -172,14 +170,13 @@ h6 {
 }
 .links a {
     color: #fff;
-    /* width: 30%; */
     display: inline-block;
-    margin: 0 5%;
+    margin: 0 2%;
     text-decoration: underline;
     font-size: 16px;
 }
 
-.contentplay {text-align: center;margin-top: 10%;}
+.contentplay {text-align: center;margin-top: 5%;}
 .play {
     margin-bottom: 5%;
     background: #fff;
@@ -226,7 +223,7 @@ h6 {
     border: medium none;
     color: #333;
     padding: 10px 0px;
-    width: 30%;
+    width: 12%;
     cursor: pointer;
     transition: 0.3s;
 }
