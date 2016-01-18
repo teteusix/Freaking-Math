@@ -18,10 +18,23 @@
 #wrong {
     background: #e74c3c;
 }
+#endGame {
+	display: none;
+    /* border: 10px solid #c0392b; */
+    background: #e74c3c;
+    color: #f1c40f;
+    text-align: center;
+    padding: 0;
+    height: 100vh;
+    position: absolute;
+    margin-top: -162px;
+    width: 99%;
+}
 </style>
 </head>
 <body>
 
+<div id="oiier">
 <button onclick="nextTurn();">JOGAR</button>
 <!-- -->
 <div id="sum">
@@ -33,6 +46,11 @@
 	<span id="wrong">Errado</span>
 </div>
 <input type="text" id="score" name="score" value="0">
+</div>
+
+<div id="endGame">
+	<h1>Você perdeu</h1>
+</div>
 
 <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="app.js"></script>

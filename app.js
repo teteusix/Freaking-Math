@@ -1,3 +1,4 @@
+// SET INITIAL VALUE
 var score_val = 0;
 
 
@@ -6,6 +7,7 @@ function newScore() {
 	return window.score_val += 1;
 }
 
+// NEW TURN
 function nextTurn() {
 	var valueSum1 = 1+Math.floor(Math.random()*9), // Generate a random number between 1 and 9
 		valueSum2 = 1+Math.floor(Math.random()*9), // Generate a random number between 1 and 9
@@ -25,9 +27,11 @@ function nextTurn() {
 	if (window.viewResult == trueResult) {		
 		console.log('O botão certo');
 		right.addEventListener("click", nextTurn, true);
+		wrong.addEventListener("click", endGame, true);
 	} else {
 		console.log('O botão errado');
 		wrong.addEventListener("click", nextTurn, true);
+		right.addEventListener("click", endGame, true);
 	};
 	sum1.innerHTML = valueSum1;
 	sum2.innerHTML = valueSum2;
@@ -38,3 +42,8 @@ function nextTurn() {
 	document.getElementById('score').setAttribute('value', score_val);
 }
 
+
+function endGame() {
+	$('#endGame').slideDown();
+	setTimeout(function(){ location.reload(); }, 9000);
+}
