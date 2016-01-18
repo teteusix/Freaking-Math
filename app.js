@@ -7,6 +7,15 @@ function newScore() {
 	return window.score_val += 1;
 }
 
+// FIRST TURN
+function firstTurn() {
+	nextTurn();
+	
+	//$('.contentplay').fadeOut();
+	$('.contentplay').slideUp('100');
+	$('.main').fadeIn();
+}
+
 // NEW TURN
 function nextTurn() {
 	var valueSum1 = 1+Math.floor(Math.random()*9), // Generate a random number between 1 and 9
