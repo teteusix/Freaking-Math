@@ -3,9 +3,26 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Freaking Math</title>
+	<style type="text/css">
+#right, #wrong {
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    text-align: center;
+    width: 100px;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+#right {background: #2ecc71;}
+#wrong {
+    background: #e74c3c;
+}
+</style>
 </head>
 <body>
 
+<button onclick="nextTurn();"></button>
 <!-- -->
 <div id="sum">
 	<span id="sum1"></span>+<span id="sum2"></span>
@@ -15,7 +32,7 @@
 	<span id="right">Certo</span>
 	<span id="wrong">Errado</span>
 </div>
-
+<input id="score" value="">
 
 <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="app.js"></script>
