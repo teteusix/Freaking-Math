@@ -25,7 +25,7 @@ function nextTurn() {
 	
 	sum1.innerHTML = valueSum1;
 	sum2.innerHTML = valueSum2;
-	viewresultRandom.innerHTML = "Resultado: <strong>" + viewResult + "</strong><br/>Aleatorio: <strong>" + resultRandom + "</strong><br/>Real: <strong>" + trueResult + "</strong>";
+	viewresultRandom.innerHTML = viewResult;
 
 	// verify true result
 	if (viewResult == trueResult) {	

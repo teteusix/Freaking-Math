@@ -1,0 +1,288 @@
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+body {margin: 0; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  margin: .67em 0;
+  font-size: 2em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+button {
+  overflow: visible;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+input {
+  line-height: normal;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+  font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #fff;
+  background-color: #34495e;
+}
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: #23527c;
+  text-decoration: underline;
+}
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+figure {
+  margin: 0;
+}
+img {
+  vertical-align: middle;
+}
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+[role="button"] {
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+
+.content {
+    position: relative;
+    margin: 10px auto;
+    width: 540px;
+    /* border: 1px solid #ccc; */
+    padding: 20px;
+    max-width: 100%;
+}
+.content h1 {
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.links {
+    text-align: center;
+    display: block;
+    padding: 15px 0;
+}
+.links a {
+    color: #fff;
+    /* width: 30%; */
+    display: inline-block;
+    margin: 0 5%;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+.contentplay {text-align: center;margin-top: 10%;}
+.play {
+    margin-bottom: 5%;
+    background: #fff;
+    color: #34495e;
+    font-size: 64px;
+    line-height: 1;
+    padding: 24px 25px 23px 40px;
+    border-radius: 155px;
+    cursor: pointer;
+    border: 5px solid #2c3e50;
+}
+.play:hover {background: #bdc3c7;}
+.contentplay p {
+    font-size: 32px;
+    margin: 0;
+}
+
+.main {
+    text-align: center;
+    min-height: 310px;
+    display: none;
+}
+
+.sum {
+    padding: 10px 0;
+    font-size: 70px;
+    font-weight: bolder;
+}
+.sum p {
+    font: inherit;
+    margin: 0;
+}
+.sum span {
+    font: inherit;
+}
+
+.buttons {
+    padding: 20px 0;
+}
+.buttons button, .buttons button:visited {
+    margin: 0 5px;
+    background: #fff;
+    border: medium none;
+    color: #333;
+    padding: 10px 0px;
+    width: 30%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.buttons button:hover, .buttons button:active {
+    background: #bdc3c7;
+}
+.buttons button::before {
+  display: inline-block;
+  font-family: 'FontAwesome';
+  font-size: 48px;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1;
+ }
+.buttons #right {
+    color: #27ae60;
+}
+.buttons #wrong {
+    color: #c0392b;
+}
+.buttons #right::before {
+  content: '\f00c';
+}
+.buttons #wrong::before {
+  content: '\f00d';
+}
+
+.result {
+    font-size: 40px;
+    width: 315px;
+    margin: 0 auto;
+    padding: 10px;
+    background: #2c3e50;
+}
+.result p {
+    margin: 0;
+    display: inline-block;
+    width: 45%;
+}
+.result input {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    border: 1px solid #34495e;
+    background: #2c3e50;
+}
+
+#endGame {
+    position: relative;
+    width: 315px;
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px 10px;
+    font-size: 30px;
+    background: #e74c3c;
+    display: none;
+}
+#endGame span {}
+#endGame strong {}
