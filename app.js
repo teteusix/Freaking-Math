@@ -66,16 +66,18 @@ function nextTurn() {
 function endGame() {
 	$('.sum,.buttons').css('display', 'none');
 	$('#endGame').fadeIn(1000);
+	clearInterval(window.animate);
+	$('progress').val(100);
 }
 
 
-
+var time = 0;
 
 function startCountdown() {
 	var barArea = document.getElementById('bar-area');
 	barArea.innerHTML = '';
-	clearInterval(animate);
-	var time = 0;
+	clearInterval(window.animate);
+	
 	console.log(time);
 
 	var barra1 = document.createElement("progress");
@@ -98,13 +100,13 @@ function startCountdown() {
 			var time = 0;
 			//var value = 0;
 			addValue = barra1.setAttribute('value', 0);
-			clearInterval(animate);
+			clearInterval(window.animate);
 			endGame();          
 			return false;
 		}
 	};
 
-	var animate = setInterval(function() {
+	window.animate = setInterval(function() {
 		loading();
 	}, time);
 

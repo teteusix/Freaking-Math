@@ -284,6 +284,7 @@ h6 {
 }
 #endGame span {}
 #endGame strong {}
+#endGame a {color: inherit;text-decoration: underline;}
 
 
 
