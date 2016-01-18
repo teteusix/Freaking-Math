@@ -12,5 +12,5 @@ var valueSum1 = 1+Math.floor(Math.random()*9), // Generate a random number betwe
 // Test
 sum1.innerHTML = valueSum1;
 sum2.innerHTML = valueSum2;
-resultRandom.innerHTML = "Resultado: " + window.viewResult + " -  Aleatorio: " + valueResultRandom + " -  Real: " + trueResult;
+resultRandom.innerHTML = "Resultado: <strong>" + window.viewResult + "</strong><br/>Aleatorio: <strong>" + valueResultRandom + "</strong><br/>Real: <strong>" + trueResult + "</strong>";
 
